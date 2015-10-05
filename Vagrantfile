@@ -1,23 +1,23 @@
 #Define the list of machines
 slurm_cluster = {
-    :controller => {
-        :hostname => "a-head",
+    :head => {
+        :hostname => "head",
         :ipaddress => "10.10.10.5"
     },
-    :server => {                                                              
-        :hostname => "compute-0",
+    :compute0 => {                                                              
+        :hostname => "compute0",
         :ipaddress => "10.10.10.6"
     },
-    :server => {
-        :hostname => "compute-1",
+    :compute1 => {
+        :hostname => "compute1",
         :ipaddress => "10.10.10.7"
     },
-    :server => {                                                              
-        :hostname => "compute-2",
+    :compute2 => {                                                              
+        :hostname => "compute2",
         :ipaddress => "10.10.10.8"
     },
-    :server => {
-        :hostname => "compute-3",
+    :compute3 => {
+        :hostname => "compute3",
         :ipaddress => "10.10.10.9"
     },
 
@@ -27,11 +27,11 @@ slurm_cluster = {
 $script = <<SCRIPT
 apt-get update
 apt-get install -y -q vim slurm-llnl
-echo "10.10.10.5    a-head" >> /etc/hosts
-echo "10.10.10.6    compute-0" >> /etc/hosts
-echo "10.10.10.7    compute-1" >> /etc/hosts
-echo "10.10.10.8    compute-2" >> /etc/hosts
-echo "10.10.10.9    compute-3" >> /etc/hosts
+echo "10.10.10.5    head" >> /etc/hosts
+echo "10.10.10.6    compute0" >> /etc/hosts
+echo "10.10.10.7    compute1" >> /etc/hosts
+echo "10.10.10.8    compute2" >> /etc/hosts
+echo "10.10.10.9    compute3" >> /etc/hosts
 wget https://github.com/jordangumm/slurm_test/blob/master/slurm.conf
 cp slurm.conf /etc/slurm-llnl/
 SCRIPT
