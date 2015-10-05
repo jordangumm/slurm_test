@@ -27,11 +27,11 @@ slurm_cluster = {
 $script = <<SCRIPT
 apt-get update
 apt-get install -y -q vim slurm-llnl
-echo "10.10.10.3    a-head" >> /etc/hosts
-echo "10.10.10.4    compute-0" >> /etc/hosts
-echo "10.10.10.5    compute-1" >> /etc/hosts
-echo "10.10.10.6    compute-2" >> /etc/hosts
-echo "10.10.10.7    compute-3" >> /etc/hosts
+echo "10.10.10.5    a-head" >> /etc/hosts
+echo "10.10.10.6    compute-0" >> /etc/hosts
+echo "10.10.10.7    compute-1" >> /etc/hosts
+echo "10.10.10.8    compute-2" >> /etc/hosts
+echo "10.10.10.9    compute-3" >> /etc/hosts
 wget https://github.com/jordangumm/slurm_test/blob/master/slurm.conf
 cp slurm.conf /etc/slurm-llnl/
 SCRIPT
