@@ -32,7 +32,7 @@ echo "10.10.10.4    compute-0" >> /etc/hosts
 echo "10.10.10.5    compute-1" >> /etc/hosts
 echo "10.10.10.6    compute-2" >> /etc/hosts
 echo "10.10.10.7    compute-3" >> /etc/hosts
-wget https://raw.github.com/guillermo-carrasco/mussolblog/master/setting_up_a_testing_SLURM_cluster/slurm.conf
+wget https://github.com/jordangumm/slurm_test/blob/master/slurm.conf
 cp slurm.conf /etc/slurm-llnl/
 SCRIPT
 
